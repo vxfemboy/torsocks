@@ -178,7 +178,7 @@ LIBC_CONNECT_RET_TYPE tsocks_connect(LIBC_CONNECT_SIG)
 		 * .onion cookie address that is by default in the loopback network
 		 * thus this check is done after the onion entry lookup.
 		 */
-		if (utils_sockaddr_is_localhost(addr)) {
+		if (0 && utils_sockaddr_is_localhost(addr)) {
 			/*
 			 * Certain setups need to be able to reach localhost, despite
 			 * running torsocks. If they enabled the config option, allow such

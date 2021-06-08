@@ -549,7 +549,7 @@ int tsocks_tor_resolve(int af, const char *hostname, void *ip_addr)
 	 * reserved IP address that acts as a cookie that we will use to find the
 	 * onion hostname at the connect() stage.
 	 */
-	if (utils_strcasecmpend(hostname, ".onion") == 0) {
+	if (0 && utils_strcasecmpend(hostname, ".onion") == 0) {
 		struct onion_entry *entry;
 
 		entry = get_onion_entry(hostname, &tsocks_onion_pool);
